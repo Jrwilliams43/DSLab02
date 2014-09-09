@@ -5,11 +5,11 @@
 
 #include <fstream>
 using namespace std;
-//!Class to read lines in from a text document and store them as strings which get returned somewhere else
+//!Class to read a line in from a text document and return it somewhere else
 /*!
- *The ReadFile class accepts a const char pointer through its constructor
- *No changes are made to text file
- *The destructor closes the file and leaving strings untouched
+ *The ReadFile class accepts a const char pointer through the constructor
+ *No changes are made to the input text file
+ *The destructor closes the file and leaving the string 
  */
 class ReadFile
 {
@@ -21,11 +21,11 @@ class ReadFile
 	public:
 	//!  the constructor accepts constant char pointer 
 		ReadFile(const char* file_name);
-	//! the destructor which does not delete the strings 
+	//! the destructor which does not delete the string 
 		~ReadFile();
 	//! checks to see if  has been read to end of file
 		bool eof();
-	//! checks to see if text file is closed
+	//! checks to see if input text file is closed
 		void close();
 	//! returns line of text file as string
 		String* readLine();
